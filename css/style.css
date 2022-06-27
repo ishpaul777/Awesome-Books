@@ -1,0 +1,145 @@
+* {
+  font-family: 'Overpass', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(216, 12%, 8%);
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  color: #fff;
+}
+
+.bi-book-half {
+  font-size: 28px;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%) scale(1);
+}
+
+.heading {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 42px;
+}
+
+.alert {
+  text-align: center;
+  color: #fff;
+  background: hsla(25, 97%, 53%, 0.879);
+  width: 60%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.highlight {
+  color: hsl(25, 97%, 53%);
+}
+
+table {
+  font-size: 15px;
+  border-collapse: collapse;
+  background-color: hsl(212, 12%, 24%);
+  width: 90vw;
+  transform: scale(0);
+}
+
+table.active {
+  transform: scale(1);
+}
+
+th,
+td {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+}
+
+tr:nth-of-type(even) {
+  background-color: hsl(213, 19%, 18%);
+}
+
+#add-book {
+  display: none;
+  align-self: center;
+  background-color: hsl(213, 19%, 18%);
+  padding: 20px;
+  font-size: 18px;
+  width: 80vw;
+  flex-direction: column;
+  border-radius: 13px;
+  margin-bottom: 50px;
+  transform: scale(0);
+}
+
+#add-book.active {
+  display: flex;
+  transform: scale(1);
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+input {
+  background-color: hsl(212, 12%, 24%);
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: hsl(25, 97%, 53%);
+  border: 0;
+  color: #fff;
+  border-radius: 16px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.remove-btn {
+  font-size: 18px;
+  color: hsl(25, 97%, 53%);
+  text-decoration: none;
+}
+
+@media (min-width: 820px) {
+  table {
+    width: 30vw;
+  }
+
+  #add-book {
+    width: 25vw;
+  }
+}

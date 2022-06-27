@@ -1,13 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Devlopers Dev Summit 2022.
+# Awesome Books project
 
-> This is the capstone project from the first module of Microverse Program.
+> This is the  project from the Javascript module of Microverse Program.
 
 This is a fictional page built for my portfolio project
-and is build based on an online website for a conference and Any Logos
-and name used is for the purpose of Placeholding. Website layout and design belongs to
-[Cindy Shin](https://www.behance.net/adagio07),and used for educational purposes.
+and is build for practicis Object oriented programming
 
 ## Built With
 
@@ -15,10 +13,8 @@ and name used is for the purpose of Placeholding. Website layout and design belo
 - JavaScript
 
 ## Live Demo
-Here is how it looks [live](https://ishpaul777.github.io/Landing-page-for-Dev-summit/).
+Here is how it looks [live](https://ishpaul777.github.io//).
 
-## Loom Video
-I have presented the project in a [Loom Video](https://www.loom.com/share/89e7cef7a9cc4eaaaf2be69a8523f9c8).
 
 ## Getting Started
 
@@ -48,9 +44,6 @@ Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- To [Cindy Shin](https://www.behance.net/adagio07), since the whole website is based on her template.
 
 ## 📝 License
 
