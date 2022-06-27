@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Overpass"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Awesome Books</title>
   </head>
   <body>
@@ -35,6 +35,7 @@
         </div>
         <button type="submit" class="btn-add-book">Add Book</button>
       </form>
+      <h2 class="heading">Book <span class="highlight">Collection</span></h2>
       <table class="book-table active">
         <thead>
           <tr>
@@ -47,6 +48,13 @@
         <tbody id="book-list">
             
         </tbody>
+        <tfoot >
+          <tr>
+          <td colspan="4" class="table-footer">
+           <button type="button" class="add-more">Read Note in pull request<i class="bi bi-plus"></i></button>
+          </td>
+          </tr>
+        </tfoot>
       </table>
       <!-- <div class="nav-btns">
         <button class="see-collection">Your Collection <i class="bi bi-arrow-up-right"></i></button>
