@@ -14,7 +14,7 @@ body {
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100vw;
   padding: 15px;
 }
@@ -85,6 +85,10 @@ tr:nth-of-type(even) {
   background-color: hsl(213, 19%, 18%);
 }
 
+.table-footer {
+  text-align: center;
+}
+
 #add-book {
   display: none;
   align-self: center;
@@ -126,6 +130,7 @@ button {
   border-radius: 16px;
   width: fit-content;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 .remove-btn {

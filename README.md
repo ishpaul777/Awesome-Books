@@ -13,7 +13,7 @@ and is build for practicis Object oriented programming
 - JavaScript
 
 ## Live Demo
-Here is how it looks [live](https://ishpaul777.github.io//).
+Here is how it looks [live](https://ishpaul777.github.io/Awesome-Books/).
 
 
 ## Getting Started
@@ -44,6 +44,8 @@ Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
+## Acknowledgment
+The project idea is originally Microverse Javascript Curriculum.
 
 ## 📝 License
 
