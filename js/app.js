@@ -153,7 +153,7 @@ showList.addEventListener('click', () => {
   document.querySelector('.contact-info').classList.remove('active');
   document.querySelector('.heading').innerHTML = 'Your <span class="highlight">Collection</span>';
   showList.style.display = 'none';
-  contact.style.display ='flex';
+  contact.style.display = 'flex';
 });
 
 addMore.addEventListener('click', () => {
