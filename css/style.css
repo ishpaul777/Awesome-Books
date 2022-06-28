@@ -176,6 +176,31 @@ button {
   align-items: center;
 }
 
+.contact-info{
+  width: 80vw;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%) scale(0);
+  transition: 0.5s ease-in-out;
+}
+.contact-info.active{
+  transform: translate(-50%,-50%) scale(1);
+}
+.contact-detail{
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.contact-options li {
+  margin-bottom: 10px;
+}
+.contact-options li a{
+  color: hsl(25, 97%, 53%);
+  text-decoration: none;
+}
+
 @media (min-width: 820px) {
   table {
     width: 30vw;
@@ -183,5 +208,8 @@ button {
 
   #add-book {
     width: 25vw;
+  }
+  .contact-info{
+    width: 30vw;
   }
 }

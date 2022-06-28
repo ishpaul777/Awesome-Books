@@ -145,17 +145,31 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
 const showList = document.querySelector('.see-collection');
 const addMore = document.querySelector('.add-more');
+const contact = document.querySelector('.contact');
 
 showList.addEventListener('click', () => {
   document.querySelector('.book-table').classList.add('active');
   document.querySelector('.input-books').classList.remove('active');
+  document.querySelector('.contact-info').classList.remove('active');
   document.querySelector('.heading').innerHTML = 'Your <span class="highlight">Collection</span>';
   showList.style.display = 'none';
+  contact.style.display ='flex';
 });
 
 addMore.addEventListener('click', () => {
   document.querySelector('.input-books').classList.add('active');
   document.querySelector('.book-table').classList.remove('active');
+  document.querySelector('.contact-info').classList.remove('active');
   document.querySelector('.heading').innerHTML = 'Add a <span class="highlight">Book</span>';
+  showList.style.display = 'flex';
+  contact.style.display = 'flex';
+});
+
+contact.addEventListener('click', () => {
+  document.querySelector('.input-books').classList.remove('active');
+  document.querySelector('.book-table').classList.remove('active');
+  document.querySelector('.contact-info').classList.add('active');
+  document.querySelector('.heading').innerHTML = 'Contact <span class="highlight">Me</span>';
+  contact.style.display = 'none';
   showList.style.display = 'flex';
 });
