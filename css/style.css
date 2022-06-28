@@ -6,21 +6,41 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: hsl(216, 12%, 8%);
   color: #fff;
 }
 
 nav {
+  padding-top: 20px;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  gap: 25px;
   width: 100vw;
-  padding: 15px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.nav-options {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-options li {
+  font-size: 18px;
+  color: #fff;
+}
+
+.nav-options li.active {
+  color: hsl(25, 97%, 53%);
+  border-bottom: 1px solid hsl(25, 97%, 53%);
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 28px;
   color: #fff;
 }
 
@@ -29,16 +49,9 @@ nav {
   color: #fff;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%) scale(1);
-}
-
 .heading {
+  position: absolute;
+  top: 18vh;
   margin-bottom: 10px;
   text-align: center;
   font-size: 42px;
@@ -58,16 +71,23 @@ nav {
   color: hsl(25, 97%, 53%);
 }
 
+.book-table {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%) scale(0);
+  transition: 0.5s ease-in-out;
+}
+
+.book-table.active {
+  transform: translateY(-50%) scale(1);
+}
+
 table {
   font-size: 15px;
   border-collapse: collapse;
   background-color: hsl(212, 12%, 24%);
   width: 90vw;
-  transform: scale(0);
-}
-
-table.active {
-  transform: scale(1);
 }
 
 th,
@@ -87,10 +107,25 @@ tr:nth-of-type(even) {
 
 .table-footer {
   text-align: center;
+  background: hsl(213, 19%, 18%);
+}
+
+.input-books {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%) scale(0);
+  transition: 0.5s ease-in-out;
+}
+
+.input-books.active {
+  transform: translateY(-50%) scale(1);
 }
 
 #add-book {
-  display: none;
+  display: flex;
   align-self: center;
   background-color: hsl(213, 19%, 18%);
   padding: 20px;
@@ -99,12 +134,6 @@ tr:nth-of-type(even) {
   flex-direction: column;
   border-radius: 13px;
   margin-bottom: 50px;
-  transform: scale(0);
-}
-
-#add-book.active {
-  display: flex;
-  transform: scale(1);
 }
 
 .fieldset {
@@ -139,12 +168,82 @@ button {
   text-decoration: none;
 }
 
+/*
+.nav-btns {
+  position: absolute;
+  bottom: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.see-collection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: hsl(25, 97%, 53%);
+}
+
+.contact {
+  font-size: 15px;
+  padding: 15px;
+  display: flex;
+  align-self: center;
+  align-items: center;
+} */
+
+.contact-info {
+  width: 80vw;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.5s ease-in-out;
+}
+
+.contact-info.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.contact-detail {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-options li {
+  margin-bottom: 10px;
+}
+
+.contact-options li a {
+  color: hsl(25, 97%, 53%);
+  text-decoration: none;
+}
+
 @media (min-width: 820px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .heading {
+    top: 15vh;
+  }
+
   table {
     width: 30vw;
   }
 
   #add-book {
     width: 25vw;
+  }
+
+  .contact-info {
+    width: 30vw;
   }
 }

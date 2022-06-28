@@ -81,7 +81,7 @@ class UI {
     }
     div.appendChild(document.createTextNode(message));
 
-    const container = document.querySelector('.wrapper');
+    const container = document.querySelector('.input-books');
     const form = document.querySelector('#add-book');
     container.insertBefore(div, form);
 
@@ -140,3 +140,77 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   // Remove book from store
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });
+
+// Event: Navigations
+
+const showList = document.querySelector('.collection');
+
+const addMore = document.querySelectorAll('.add-more');
+
+const contact = document.querySelector('.contact');
+
+showList.addEventListener('click', () => {
+  document.querySelector('.book-table').classList.add('active');
+  document.querySelector('.input-books').classList.remove('active');
+  document.querySelector('.contact-info').classList.remove('active');
+  showList.classList.add('active');
+  document.querySelector('.add-more').classList.remove('active');
+  contact.classList.remove('active');
+  document.querySelector('.heading').innerHTML = 'Your <span class="highlight">Collection</span>';
+});
+
+addMore.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.input-books').classList.add('active');
+    document.querySelector('.book-table').classList.remove('active');
+    document.querySelector('.contact-info').classList.remove('active');
+    document.querySelector('.add-more').classList.add('active');
+    showList.classList.remove('active');
+    contact.classList.remove('active');
+    document.querySelector('.heading').innerHTML = 'Add a <span class="highlight">Book</span>';
+  });
+});
+
+contact.addEventListener('click', () => {
+  document.querySelector('.contact-info').classList.add('active');
+  document.querySelector('.book-table').classList.remove('active');
+  document.querySelector('.input-books').classList.remove('active');
+  contact.classList.add('active');
+  showList.classList.remove('active');
+  document.querySelector('.add-more').classList.remove('active');
+  document.querySelector('.heading').innerHTML = 'Contact<span class="highlight">Me</span>';
+});
+
+// experiment
+
+// const showList = document.querySelector('.see-collection');
+// const addMore = document.querySelector('.add-more');
+// const contact = document.querySelector('.contact');
+
+// showList.addEventListener('click', () => {
+//   document.querySelector('.book-table').classList.add('active');
+//   document.querySelector('.input-books').classList.remove('active');
+//   document.querySelector('.contact-info').classList.remove('active');
+//   document.querySelector('.heading').innerHTML = `
+//   Your <span class="highlight">Collection</span>`;
+//   showList.style.display = 'none';
+//   contact.style.display = 'flex';
+// });
+
+//  addMore.addEventListener('click', () => {
+//   document.querySelector('.input-books').classList.add('active');
+//   document.querySelector('.book-table').classList.remove('active');
+//   document.querySelector('.contact-info').classList.remove('active');
+//   document.querySelector('.heading').innerHTML = 'Add a <span class="highlight">Book</span>';
+//   showList.style.display = 'flex';
+//   contact.style.display = 'flex';
+// });
+
+// contact.addEventListener('click', () => {
+//   document.querySelector('.input-books').classList.remove('active');
+//   document.querySelector('.book-table').classList.remove('active');
+//   document.querySelector('.contact-info').classList.add('active');
+//   document.querySelector('.heading').innerHTML = 'Contact <span class="highlight">Me</span>';
+//   contact.style.display = 'none';
+//   showList.style.display = 'flex';
+// });
