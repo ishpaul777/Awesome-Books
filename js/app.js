@@ -81,7 +81,7 @@ class UI {
     }
     div.appendChild(document.createTextNode(message));
 
-    const container = document.querySelector('.wrapper');
+    const container = document.querySelector('.input-books');
     const form = document.querySelector('#add-book');
     container.insertBefore(div, form);
 
@@ -139,4 +139,23 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   UI.removeBook(e.target);
   // Remove book from store
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+});
+
+// Event: Navigations
+
+const showList = document.querySelector('.see-collection');
+const addMore = document.querySelector('.add-more');
+
+showList.addEventListener('click', () => {
+  document.querySelector('.book-table').classList.add('active');
+  document.querySelector('.input-books').classList.remove('active');
+  document.querySelector('.heading').innerHTML = 'Your <span class="highlight">Collection</span>';
+  showList.style.display = 'none';
+});
+
+addMore.addEventListener('click', () => {
+  document.querySelector('.input-books').classList.add('active');
+  document.querySelector('.book-table').classList.remove('active');
+  document.querySelector('.heading').innerHTML = 'Add a <span class="highlight">Book</span>';
+  showList.style.display = 'flex';
 });
