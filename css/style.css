@@ -49,9 +49,16 @@ nav {
   color: #fff;
 }
 
+.time {
+  align-self: flex-end;
+  margin-right: 50px;
+  padding: 10px;
+  border-bottom: 2px solid hsl(25, 97%, 53%);
+}
+
 .heading {
   position: absolute;
-  top: 18vh;
+  top: 23vh;
   margin-bottom: 10px;
   text-align: center;
   font-size: 42px;
@@ -115,13 +122,13 @@ tr:nth-of-type(even) {
   flex-direction: column;
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%) scale(0);
+  -ms-transform: translateY(-30%);
+  transform: translateY(-30%) scale(0);
   transition: 0.5s ease-in-out;
 }
 
 .input-books.active {
-  transform: translateY(-50%) scale(1);
+  transform: translateY(-30%) scale(1);
 }
 
 #add-book {
@@ -232,7 +239,7 @@ button {
   }
 
   .heading {
-    top: 15vh;
+    top: 20vh;
   }
 
   table {
